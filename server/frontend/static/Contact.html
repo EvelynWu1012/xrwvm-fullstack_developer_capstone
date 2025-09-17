@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Best Cars</title>
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkturquoise; height: 1in;">
+  <div class="container-fluid">
+    <h2 class="mb-0 me-4">Dealerships</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Logo -->
+<header class="text-center py-3">
+  <img src="{% static 'logo.png' %}" alt="Best Cars Logo" class="logo">
+</header>
+
+<!-- Hero Banner -->
+<section class="position-relative mx-auto" 
+         style="height:200px; max-width:1600px; overflow:hidden;">
+  <img src="{% static 'contact-banner.jpg' %}" alt="Showroom Banner"
+       style="width:100%; height:100%; object-fit:cover;">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3">
+    <h1 class="fw-bold display-6 text-shadow">We’d Love to Hear From You</h1>
+    <p class="lead text-shadow">Questions, test drives, or service—our team is here to help.</p>
+  </div>
+</section>
+
+
+<!-- Contact & Map -->
+<main class="container my-4">
+  <div class="row g-4">
+    <!-- Contact Card -->
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Contact Us</h2>
+          <p class="mb-4">Use the details below or visit your nearest location. We typically respond within one business day.</p>
+          <div class="details">
+            <p class="mb-1 fw-bold">Best Cars Dealership</p>
+            <p class="mb-2">1234 Elm Street, Suite 500<br>New York, NY 10001</p>
+            <p class="mb-1"><strong>Email:</strong> support@bestcars.com</p>
+            <p class="mb-1"><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p class="mb-3"><strong>Business Hours:</strong> Mon–Fri, 9:00 AM – 6:00 PM</p>
+            <hr>
+            <p class="mb-1"><strong>Sales:</strong> sales@bestcars.com · +1 (555) 234-7890</p>
+            <p class="mb-1"><strong>Service:</strong> service@bestcars.com · +1 (555) 345-8901</p>
+            <p class="mb-0"><strong>Parts:</strong> parts@bestcars.com · +1 (555) 456-9012</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map / Illustration -->
+    <div class="col-12 col-lg-6">
+      <div class="ratio ratio-16x9 rounded overflow-hidden border h-100">
+        <iframe
+            src="https://www.google.com/maps?q=New+York,+NY+10001&output=embed"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Car Gallery -->
+<section class="container my-5">
+  <h2 class="h4 mb-3">Featured Vehicles</h2>
+  <div class="row g-3">
+    <div class="col-12 col-md-4">
+      <div class="card border-0">
+        <img src="{% static 'car1.jpg' %}" class="contact-image" alt="Luxury Sedan">
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card border-0">
+        <img src="{% static 'car2.jpg' %}" class="contact-image" alt="Sports Coupe">
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card border-0">
+        <img src="{% static 'car3.jpg' %}" class="contact-image" alt="Family SUV">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 text-muted">
+  © {{ now|default:'' }} Best Cars Dealership · All rights reserved
+</footer>
+
+<script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
